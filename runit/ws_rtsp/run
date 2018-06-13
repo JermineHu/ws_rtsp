@@ -1,0 +1,4 @@
+#!/bin/sh -e
+exec 2>&1
+exec chpst -u root websock_rtsp_proxy --config /etc/ws_rtsp.ini
+

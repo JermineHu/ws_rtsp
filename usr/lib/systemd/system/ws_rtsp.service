@@ -1,0 +1,13 @@
+[Unit]
+Description=Websocket RTSP proxy
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+ExecStart=/usr/bin/websock_rtsp_proxy --config /etc/ws_rtsp.ini
+Restart=always
+RestartSec=10
+User=nobody
+
+[Install]
+WantedBy=multi-user.target
